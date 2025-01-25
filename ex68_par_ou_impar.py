@@ -1,39 +1,29 @@
 from random import randint
+v = 0
+while True:
+    p1 = int(input('Digite um número: '))
+    c1 = randint(0,10)
+    tot = p1 + c1
+    tipo = ' '
+    while tipo not in 'PI':
+        tipo = str(input('Par ou Ímpar? [P/I] ')).strip().upper()[0]
+    print(f'Você jogou {p1} e o computador jogou {c1}. O total é {tot}')
+    if tipo == 'P':
+        if tot % 2 == 0:
+            print('Você Venceu!!!')
+            v +=1
+        else:
+            print('Você Perdeu...')
+            break
 
-p1 = 0
-p2 = ''
-c1 = 0
-c2 = ''
-soma = 0
-continuar = 'S'
+    if tipo == 'I':
+        if tot % 2 == 1:
+            print('Você Venceu!!!')
+            v +=1
+        else:
+            print('Você Perdeu...')
+            break
+    print ('vamos jogar novamente...')
 
-while continuar not in ('nN'):
-    p1 = int(input('Diga um valor: '))
-    p2 = str(input('Par ou Ímpar? [P/I]')).strip().upper()
-
-    c1 = randint(1,10)
-    if p2 == "P": c2 = "I" 
-    else: c2 = "I"
-
-    soma = p1 + c1
-
-    if soma % 2 == 0:
-        print(f'Você jogou {p1}, o computador jogou {c1}. O total é {soma}, DEU PAR')
-        if p2 == 'P':
-            print(f'Parabéns, você venceu!!!')
-        elif c2 == 'P':
-            print(f'O Computador venceu...')
-
-    elif soma % 2 != 0:
-        print(f'Você jogou {p1}, o computador jogou {c1}. O total é {soma}, DEU ÍMPAR')
-        if p2 == 'I':
-            print(f'Parabéns, você venceu!!!')
-        elif c2 == 'I':
-            print(f'O Computador venceu...')
-
-continuar = str(input('Deseja continuar? [S/N] ')).strip().upper()
-
-print('Jogo finalizado...')
-
-
-
+print(f'Game Over! Você venceu {v} vezes')
+            
