@@ -32,6 +32,6 @@ while True:
 print('-----FIM DO PROGRAMA-----')
 print(f'O total da compra foi R${total}')
 print(f'Temos {mil} produtos custando mais de R$1000')
-print(f'O produto mais barato foi {menor_produto} que custa R${menor_valor}')
+print(f'O produto mais barato foi {menor_produto} que custa R${menor_valor}!')
 
 
