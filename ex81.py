@@ -12,6 +12,7 @@ numeros.sort(reverse=True)
 
 
 print(f'Você digitou {cont} elementos')
+print(f'Você digitou {len(numeros)} elementos')
 print(f'Os valores em ordem reversa são: {numeros}')
 if 5 in numeros:
     print('O valor 5 está na lista')
