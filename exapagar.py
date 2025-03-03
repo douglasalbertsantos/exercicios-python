@@ -7,3 +7,4 @@ class Teste():
 
 obj = Teste()
 obj.display()
+obj.display()
