@@ -8,3 +8,4 @@ class Teste():
 obj = Teste()
 obj.display()
 obj.display()
+obj.display()
